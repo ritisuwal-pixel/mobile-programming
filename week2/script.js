@@ -36,7 +36,7 @@ function calculateResult(){
 
     if (total > 800 || total < 0){
         resultText = "Invalid Input";
-        color = "red";
+        color = "orange";
     }
     else if (total >= 700){
         resultText = "PASS (DISTINCTION)";
