@@ -1,0 +1,57 @@
+1.GET and SET
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" >
+        </script>
+        <script>
+            //GET [.text()]
+            $(document).ready(function(){
+                $("#show-name").click(function(){
+                    let name = $("#student-name").text(); //GET text from #student-name and store in name
+                    $("#output").text(name); //SET text into #output
+                });
+            
+            //SET [.text(own name)]
+                $("#change-name").click(function(){
+                    let name= $("#student-name").text("Ritisha Suwal"); //SET name to "Ritisha Suwal"
+                    $("#output").text("Name changed to Ritisha Suwal");
+                });
+            
+            //GET [.html()]
+                $("#show-bio").click(function(){
+                    let bio= $("#student-bio").html(); //GET html from #student-bio and store in "html"
+                    $("#output").html(bio);
+                });
+            
+            //GET [.val()]
+                $("#get-input").click(function(){
+                    let nickname= $("#nickname-input").val(); //GET val from #nickname-input and store in "nickname"
+                    $("#output").text(nickname);
+                });
+
+            //SET
+                $("#set-input").click(function(){
+                    $("#nickname-input").val("jQuery Pro");
+                    $("#output").text("Input chnaged to jQuery Pro");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="student-name">Ojaswi Koju</p>
+        <p id="student-bio">
+            <b>Student Bio:</b> 
+            Studies in Presidential Graduate School</p>
+        
+        
+        <input type="text" id="nickname-input" value="PGS"><br><br>
+        <input type="button" id="show-name" value="Show Name">
+        <input type="button" id="change-name" value="Change Name">
+        <input type="button" id="show-bio" value="Show Bio">
+        <input type="button" id="get-input" value="Get Input">
+        <input type="button" id="set-input" value="Set Input">
+
+         <p id="output">Output is displayed here !</p>
+    </body>
+</html>
