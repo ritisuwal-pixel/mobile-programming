@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Hide the paragraph
+            $("#hide-btn").click(function () {
+                $("#text-box").hide();
+            });
+
+            // Show the paragraph
+            $("#show-btn").click(function () {
+                $("#text-box").show();
+            });
+
+            // Change background color
+            $("#color-btn").click(function () {
+                $("#text-box").css("background-color", "yellow");
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+    <p id="text-box" style="padding: 10px; width: 200px; border: 1px solid black;">
+        Hello, I am Ritisha!
+    </p>
+
+    <br>
+
+    <button id="hide-btn">Hide</button>
+    <button id="show-btn">Show</button>
+    <button id="color-btn">Change Background</button>
+
+</body>
+</html>
