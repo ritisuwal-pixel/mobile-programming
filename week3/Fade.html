@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" >
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#fade-out").click(function(){
+                    $("#profile-card").fadeOut();
+                });
+
+                $("#fade-in").click(function(){
+                    $("#profile-card").fadeIn();
+                });
+
+                $("#fade-to").click(function(){
+                    $("#profile-card").fadeTo("slow",0.5);
+                });
+            });
+        </script>
+        <style>
+            #profile-card{
+                padding:20px;
+                background-color: rgb(105, 102, 102);
+                height: 250px;
+                width: 250px;
+                
+            }
+
+            #profile-photo{
+                height:100px;
+                width:100px;
+                padding:10px;
+                background-color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="profile-card">
+            <div id="profile-photo"></div>
+            <h3>Ritisha Suwal</h3>
+            <p>Student at Presidential Graduate School</p>
+        </div>
+
+        <br>
+        <button id="fade-out">Fade Out Card</button>
+        <button id="fade-in">Fade In Card</button>
+        <button id="fade-to">Fade to 50%</button>
+    </body>
+</html>
