@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" >
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#animate-card").click(function(){
+                    $("#profile-card").animate({left:"200px"},1000).animate({left:"0px"},1000);
+                });
+            });
+        </script>
+        <style>
+            #profile-card{
+                padding:20px;
+                background-color: rgb(185, 179, 179);
+                height: 250px;
+                width: 250px;
+                position: relative;
+                
+            }
+
+            #profile-photo{
+                height:100px;
+                width:100px;
+                padding:10px;
+                background-color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="profile-card">
+            <div id="profile-photo"></div>
+            <h3>Ritisha Suwal</h3>
+            <p>Student at Presidential Graduate School</p>
+        </div>
+        <br>
+        <button id="animate-card">Animate Card</button>
+
+    </body>
+</html>
