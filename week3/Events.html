@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            //Hover events
+            $("#profile-photo").mouseenter(function(){
+                $("#profile-photo").addClass("shadow");
+            });
+
+            $("#profile-photo").mouseleave(function(){
+                $("#profile-photo").removeClass("shadow");
+            });
+
+
+            //Key press
+            $("#nickname-input").keydown (function(event){
+                $("#output").text("You pressed: " + event.key);
+            });
+
+        });
+    </script>
+    <style>
+        #profile-photo {
+            width: 120px;
+            height: 120px;
+            background: lightgray;
+            transition: 0.3s;
+        }
+
+        .shadow {
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+        }
+
+        #output {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="profile-photo"></div>
+
+    <br>
+
+    <label>Enter Nickname:</label>
+    <input type="text" id="nickname-input">
+
+    <p id="output"></p>
+
+</body>
+</html>
