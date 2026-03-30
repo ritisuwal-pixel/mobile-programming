@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            background: #f4f4f4;
+        }
+
+        #profile-card {
+            width: 250px;
+            padding: 20px;
+            border: 1px solid #aaa;
+            transition: 0.3s;
+            background: white; /* important: base background */
+        }
+
+        #profile-photo {
+            width: 100px;
+            height: 100px;
+            background: lightgray;
+            transition: 0.3s;
+        }
+
+        /* Highlight class */
+        .highlighted {
+            background: yellow !important;
+            border: 3px solid orange !important;
+        }
+
+        /* Dark mode class */
+        .dark-mode {
+            background: #222 !important;
+            color: white !important;
+            border-color: #555 !important;
+        }
+
+        /* Rounded photo */
+        .rounded {
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+
+            $("#add-highlight").click(function(){
+                $("#profile-card").addClass("highlighted");
+            });
+
+            $("#remove-highlight").click(function(){
+                $("#profile-card").removeClass("highlighted");
+            });
+
+            $("#toggle-dark").click(function(){
+                $("#profile-card").toggleClass("dark-mode");
+            });
+
+            $("#toggle-rounded").click(function(){
+                $("#profile-photo").toggleClass("rounded");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="profile-card">
+        <div id="profile-photo"></div>
+        <h3>Ritisha Suwal</h3>
+        <p>BSIT Student at PGS</p>
+    </div>
+
+    <br>
+
+    <button id="add-highlight">Highlight Card</button>
+    <button id="remove-highlight">Remove Highlight</button>
+    <button id="toggle-dark">Toggle Dark Mode</button>
+    <button id="toggle-rounded">Toggle Rounded Photo</button>
+
+</body>
+</html>
