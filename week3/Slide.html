@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" >
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#slide-up").click(function(){
+                    $("#skills-list").slideUp("slow");
+                });
+
+                $("#slide-down").click(function(){
+                    $("#skills-list").slideDown("slow");
+                });
+
+                $("#slide-toggle").click(function(){
+                    $("#skills-list").slideToggle("slow");
+                });
+            });
+        </script>
+        <style>
+            #skills-list {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #aaa;
+            margin-bottom: 10px;
+            list-style-position: inside;
+        }
+        </style>
+    </head>
+    <body>
+        <h3>Skills list</h3>
+            <ol id="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+            </ol>
+
+        <button id="slide-up">Slide Up Skills</button>
+        <button id="slide-down">Slide Down Skills</button>
+        <button id="slide-toggle">Slide Toggle Skills</button>
+    </body>
+</html>
