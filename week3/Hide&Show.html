@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" >
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#hide-photo").click(function(){
+                    $("#profile-photo").hide("slow");
+                });
+
+                $("#show-photo").click(function(){
+                    $("#profile-photo").show("slow");
+                });
+
+                $("#toggle-bio").click(function(){
+                    $("#student-bio").toggle();
+                });
+            });
+        </script>
+        <style>
+            #profile-photo{
+                width: 250px;
+                height: 250px
+            }
+
+            #student-bio{
+                padding:10px;
+                width:250px;
+                border: 1px solid #aaa;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <image id="profile-photo" src ="https://img.freepik.com/free-photo/portrait-student-anime-style-attending-school_23-2151125405.jpg?semt=ais_incoming&w=740&q=80">
+            </image>
+            <p id="student-bio"><b>Student Bio:</b> 
+                <br>Studies at Presidential Graduate School</p> 
+        </div>
+        
+        <br>
+        <button id="hide-photo">Hide Photo</button>
+        <button id="show-photo">Show Photo</button>
+        <button id="toggle-bio">Toggle Bio</button>
+    </body>
+</html>
