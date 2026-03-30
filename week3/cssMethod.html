@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            background: #f4f4f4;
+        }
+
+        #profile-card {
+            width: 250px;
+            padding: 20px;
+            border: 1px solid #aaa;
+            transition: 0.3s;
+            background: white; /* important: base background */
+        }
+
+        #profile-photo {
+            width: 100px;
+            height: 100px;
+            background: lightgray;
+            transition: 0.3s;
+        }
+
+        /* Red Background class */
+        #profile-card.red-background {
+            background: #e74c3c; 
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+
+            $("#red-background").click(function(){
+                $("#profile-card").addClass("red-background");
+            });
+
+            $("#reset-background").click(function(){
+                $("#profile-card").removeClass("red-background");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="profile-card">
+        <div id="profile-photo"></div>
+        <h3>Ritisha Suwal</h3>
+        <p>BSIT Student at PGS</p>
+    </div>
+
+    <br>
+
+    <button id="red-background">Red Background</button>
+    <button id="reset-background">Reset Background</button>
+
+</body>
+</html>
